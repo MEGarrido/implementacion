@@ -1,1 +1,1 @@
-# implementaci-n   soy gay NASHE DASDADASADA asdashgfkash soy gian
+# implementaci-n   hola, como andas?
