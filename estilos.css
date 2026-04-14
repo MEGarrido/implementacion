@@ -10,39 +10,46 @@
     font-family: "PPFraktion";
     src: url(./fuentes/PPFraktionMono-Regular-BF675904a6a1564.otf);
 }
+
+
 h1{
     font-family: "Matroska", sans-serif;
+    text-align: top;
     text-align: center;
 }
-h2{
+
+
+h2, h3{
     font-family: "Orbitron", sans-serif;
+    text-align: top;
     text-align: center;
 }
-p,a{
+
+
+p,a, ul, ol, li{
     font-family: "PPFraktion", sans-serif;
-    text-align: center;
+    text-align: left;
 }
+
+
 html{   
-background-image: url(./imagenes/cuadricula.jpg);
+    background-image: url(./imagenes/cuadricula.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 h1,h2,h3,h4,h5{
-color: white;   
+    color: black;   
 }
 
 p{
-    color: red;
+    color: whitesmoke;
+    margin-top: 15px;
 }
 
-ul,ol{
+ul,ol,li{
     color: violet;
-}
-
-li{
-    color:violet;
 }
 
 body{
@@ -53,7 +60,9 @@ body{
 img{
     display: block;
     margin: auto;
-    width: 75%;
+    width: 80%;
+    border: 2px solid;
+    border-color: aqua;
 }
 
 #primertexto{
@@ -62,4 +71,18 @@ img{
 
 #papulandia{
     color: white;
+}
+
+section {
+    margin: 100px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: darkcyan;
+    border-radius: 20px;
+}
+
+#sin-fondo {
+    background: none;
 }
