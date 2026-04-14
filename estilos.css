@@ -21,7 +21,9 @@ h2{
 p,a{
     font-family: "PPFraktion", sans-serif;
     text-align: center;
-    background-image: url(./imagenes/cuadricula.jpg);
+}
+html{   
+background-image: url(./imagenes/cuadricula.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
