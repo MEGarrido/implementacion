@@ -1,3 +1,30 @@
+@font-face {
+    font-family: "Matroska" ;
+    src: url(./fuentes/Matroska-RppG6.ttf);
+}
+@font-face {
+    font-family: "Orbitron";
+    src: url(./fuentes/Orbitron-Medium.ttf);
+}
+@font-face {;
+    font-family: "PPFraktion";
+    src: url(./fuentes/PPFraktionMono-Regular-BF675904a6a1564.otf);
+}
 html{
     background-color: aquamarine;
+}
+h1{
+    font-family: "Matroska", sans-serif;
+    color: black;
+    text-align: center;
+}
+h2{
+    font-family: "Orbitron", sans-serif;
+    color: black;
+    text-align: center;
+}
+p,a{
+    font-family: "PPFraktion", sans-serif;
+    color: black;
+    text-align: center;
 }
