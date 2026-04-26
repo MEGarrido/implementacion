@@ -35,6 +35,7 @@ h1 {
     font-size: 80px;
     color: #FFFFFF;
     line-height: 1;
+    margin-top: 10px;
 }
 
 h2{
@@ -42,6 +43,8 @@ h2{
     text-align: left;
     font-size: 44px;
     color: #FFFFFF;
+    padding-top: 120px;
+    padding-left: 120px;
 }
 
 h3{
@@ -49,6 +52,7 @@ h3{
     text-align: left;
     font-size: 30px;
     color: #FFFFFF;
+    padding-bottom: 45px;
 }
 
 h4{
@@ -75,30 +79,23 @@ h6{
 
 p{
     font-family: "PPFraktion", sans-serif;
-    text-align: left;
     font-size: 20px;
     color: #FFFFFF;
 }
 
-.p18 {
-    font-size: 18px;
-}
-
-.h3-35{
-    font-size: 35px;
-}
+/*Sección Portada*/
 
 .h3-40{
     font-size: 40px;
-    color: #C8F700;
+    color: #FFFFFF;
 }
 
-.resaltado-up{
+.resaltado-rojo{
     color: #FF003C;
 }
 
-.resaltado-fecha{
-    color: #FFFFFF;
+.resaltado-verde{
+    color: #C8F700;
 }
 
 .banner-difuminado {
@@ -114,6 +111,119 @@ p{
 
 #pad-cup{
     padding-left: 250px;
+    margin-top: 0px;
+}
+
+.columna-portada{
+    width: 530px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.btn {
+    margin-top: 75px;
+    display: inline-block;
+    background: #C8F700;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    align-self: flex-start;
 }
 
 
+/* Sección Imágenes que se acoplan*/
+
+.seccion-acople {
+    width: 100%;
+    height: 1080px;
+    
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    
+    /*para ordenar los contenedores*/
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end;     
+    padding: 106px 122px; 
+}
+
+.foto-1 {
+    background-image: url('imagenes/spike.jpg');
+    background-size: 100%;
+}
+
+.foto-2 {
+    background-image: url('imagenes/pausa-stands.jpg');
+    background-size: 100%;
+    background-position: left bottom;
+}
+
+.foto-3 {
+    background-image: url('imagenes/nosotros-level.jpg');
+    background-size: 100%;
+}
+
+/*versión gemini*/
+.caja-borde {
+    background-color: #d4ff00; 
+    padding: 2px; 
+    width: 625px; 
+    clip-path: polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px);
+}
+
+.caja-contenido {
+    background-color: rgba(10, 10, 10, 0.95);
+    padding: 40px;
+    clip-path: polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px);
+}
+
+/*versión emi*/
+
+.p18 {
+    font-size: 18px;
+    padding-bottom: 41px;
+    padding-top: 41px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.h3-35{
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.contenedor-imagenes{
+    width: 626px;
+}
+
+/*Sección Equipos*/
+.seccion-equipos {
+    width: 100%;
+    height: 1080px;
+    
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url('imagenes/fondo-equipos.jpg');
+    background-size: 100%;
+}
+
+/*Sección Dudas*/
+.dudas-difuminado {
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(to right, #141414 48%, rgb(255, 0, 60, 0.4) 58%, transparent 110%), url('imagenes/dudas.jpg');
+    background-size: 100% 100%, 80% auto;
+    background-repeat: no-repeat;
+    background-position: center, right center;
+}
+
+.columna-dudas{
+    width: 650px;
+    text-align: center;
+    padding-left: 120px;
+    padding-top: 50px;
+}
