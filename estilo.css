@@ -43,8 +43,6 @@ h2{
     text-align: left;
     font-size: 44px;
     color: #FFFFFF;
-    padding-top: 120px;
-    padding-left: 120px;
 }
 
 h3{
@@ -81,17 +79,42 @@ p{
     font-family: "PPFraktion", sans-serif;
     font-size: 20px;
     color: #FFFFFF;
+    
 }
+
+
+.resaltado-rojo{
+    color: #FF003C;
+}
+
+.gris{
+    color: #c5c5c583;
+}
+
+
+.columna-titulos{
+    width: 608px;
+    text-align: center;
+    padding-left: 120px;
+    padding-top: 120px;
+}
+
+.derecha {
+  align-self: flex-end;  /* Esto empuja solo este renglón a la derecha */
+  padding-left: 200px;    /* O puedes usar un padding para un control más fino */
+}
+
+.derechaDOS {
+  align-self: flex-end;  /* Esto empuja solo este renglón a la derecha */
+  padding-left: 100px;    /* O puedes usar un padding para un control más fino */
+}
+
 
 /*Sección Portada*/
 
 .h3-40{
     font-size: 40px;
     color: #FFFFFF;
-}
-
-.resaltado-rojo{
-    color: #FF003C;
 }
 
 .resaltado-verde{
@@ -149,8 +172,9 @@ p{
 }
 
 .foto-1 {
-    background-image: url('imagenes/spike.jpg');
+    background-image: url('imagenes/spike-arena.jpg');
     background-size: 100%;
+    background-position: left bottom;
 }
 
 .foto-2 {
@@ -164,21 +188,6 @@ p{
     background-size: 100%;
 }
 
-/*versión gemini*/
-.caja-borde {
-    background-color: #d4ff00; 
-    padding: 2px; 
-    width: 625px; 
-    clip-path: polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px);
-}
-
-.caja-contenido {
-    background-color: rgba(10, 10, 10, 0.95);
-    padding: 40px;
-    clip-path: polygon(30px 0%, 100% 0%, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0% 100%, 0% 30px);
-}
-
-/*versión emi*/
 
 .p18 {
     font-size: 18px;
@@ -227,3 +236,95 @@ p{
     padding-left: 120px;
     padding-top: 50px;
 }
+
+.contenedor-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%; 
+}
+
+.linea {
+  display: flex;
+  align-items:  top center; /* Alinea el ícono verticalmente con el texto */
+  gap: 30px;
+}
+
+
+/*Sección Formulario*/
+
+.form-difuminado {
+    width: 100%;
+    height: 1080px;
+    background: url('imagenes/ascii-formulario.png'), linear-gradient(110deg, #141414 48%, #caf7002a 80%);
+    background-size: 50%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom, center;
+}
+
+.columna-formula{
+    width: 865px;
+    text-align: left;
+    padding-left: 120px;
+    padding-top: 42px;
+}
+
+
+/*Sección Sponsors*/
+.marquee {
+  display: flex;
+  overflow: hidden; 
+  user-select: none;
+  background: #C8F700; 
+
+  padding: 20px 0;
+}
+
+.marquee-content {
+    height: 80px;
+    display: flex;
+    gap: 150px; 
+    padding-right: 150px; 
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/*Sección Footer*/
+.seccion-footer{
+    width: 100%;
+    height: 382px;
+    
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url('imagenes/footer.jpg');
+    background-size: 100%;
+
+    padding-left: 120px;
+    padding-top: 148px;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+  padding-top: 25px; 
+  padding-left: 335px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center; /* Alinea ícono y texto al centro */
+  gap: 8px; /* Espacio entre ícono y texto */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
