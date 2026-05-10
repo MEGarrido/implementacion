@@ -943,10 +943,16 @@ a {
 .dot.activo {
     background: #FF003C;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 480px) {
+    .btn-acordeon:checked ~ .contenido-acordeon {
+    max-height: 150px;
+    padding: 15px 0px;
+}
 
     /* TIPOGRAFÍA GLOBAL */
-    h1 { font-size: 44px; }
+    h1 { font-size: 44px;
+        text-align: center;
+    padding-right: 55px; }
     h2 { font-size: 28px; }
     h3 { font-size: 20px; padding-bottom: 20px; }
     h4 { font-size: 18px; }
@@ -955,123 +961,226 @@ a {
     p  { font-size: 16px; }
 
     /* PORTADA */
-    .banner-difuminado {
-        padding-top: 120px;
-        padding-left: 24px;
-        height: 874px;
-        min-height: 874px;
-        background: linear-gradient(180deg, #141414 55%, #FF003C 58%, rgb(255,255,255,0.2) 70%), url('imagenes/portada.png');
-        background-size: 100% 100%, 100% auto;
-        background-repeat: no-repeat;
-        background-position: center, center bottom;
-    }
+.banner-difuminado {
+    padding-top: 40px;
+    padding-left: 0;
+    height: auto;
+    min-height: 874px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 100px;
+    background: linear-gradient(180deg, transparent 0%, transparent 25%, #FF003C 40%, #141414 55%), url('imagenes/portada.png');
+    background-size: 135% auto;
+    background-position: 100% 0%;
+}
 
-    #pad-cup { padding-left: 60px; }
+    #pad-cup { padding-left: 195px; 
+                text-align: center;}
 
-    .columna-portada {
-        width: 100%;
-        padding: 20px 24px 0 0;
-        text-align: left;
-    }
+  
+.columna-portada {
+    width: 100%;
+    padding: 20px 24px 0 24px;
+    text-align: center;
+}
 
-    .h3-40 { font-size: 16px; }
+    .h3-40 { font-size: 20px; 
+            padding-left: 24px;}
+        
+
 
     /* SECCIONES IMÁGENES */
-    .seccion-acople {
-        height: auto;
-        min-height: 500px;
-        padding: 40px 16px;
-        justify-content: center;
-        background-size: cover;
-    }
+ .seccion-acople {
+    height: auto;
+    min-height: 932px;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center top;
+}
+.contenedor-imagenes {
+    width: 100%;
+    background: #141414;
+    padding-bottom: 20px;
+    border: 2px solid #FF003C;
+    box-sizing: border-box;
+}
+.h3-35 {
+    font-size: 20px;
+    background: #FF003C;
+    padding: 20px 24px;
+    margin: 0;
+    text-align: center;
+}
 
-    .contenedor-imagenes { width: 100%; }
+  .p18 {
+    font-size: 16px;
+    padding: 24px;
+    margin: 0;
+}
 
-    .h3-35 { font-size: 20px; }
+/*equiposssss*/
 
-    .p18 {
-        font-size: 16px;
-        padding: 20px 16px;
-    }
+.carrusel-contenedor {
+    padding: 20px 16px;
+    gap: 10px;
+}
 
-    /* EQUIPOS */
-    .seccion-equipos {
-        height: 500px;
-        background-size: cover;
-    }
+.carrusel-track {
+    gap: 0;
+    max-width: 100%;
+    padding: 0 30px;
+}
 
-    .columna-titulos {
-        width: 100%;
-        padding-left: 24px;
-        padding-top: 40px;
-    }
+.tarjeta-equipo.lateral {
+    display: none;
+}
 
-    .derechaDOS { padding-left: 40px; }
+.tarjeta-equipo.central {
+    width: 90%;
+    margin: 0;
+}
+
+.tarjeta-equipo.central img {
+    height: 350px;
+    width: 100%;
+}
+
+.tarjeta-nombre.activo {
+    width: 100%;
+    margin-left: 0;
+    font-size: 20px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.tarjeta-desc {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 220px;
+     min-height: 220px;
+}
+.carrusel-flecha {
+    display: none;
+}
+
+.columna-titulos {
+    width: 100%;
+    padding-left: 96px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.seccion-equipos {
+    height: auto;
+    min-height: 700px;
+    padding-bottom: 40px;
+}
+
+.derechaDOS { padding-left: 40px; }
 
     /* DUDAS */
-    .dudas-difuminado {
-        height: auto;
-        min-height: 600px;
-        background: linear-gradient(to bottom, #141414 60%, rgb(255,0,60,0.3) 100%);
-    }
+   .dudas-difuminado {
+    height: auto;
+    min-height: 932px;
+    background: #141414;
+    padding-bottom: 0;
+}
 
     .columna-dudas {
         width: 100%;
+        padding-top: 40px;
         padding-left: 24px;
         padding-right: 16px;
     }
 
-    #h3-sin { font-size: 16px; }
+    .dudas-difuminado .columna-titulos {
+    padding-right: 250px;
+    text-align: center;
+    width: 100%;
+}
+
+    #h2-dudas {
+    text-align: center;
+    padding-left: 25px;
+}
+   #h3-sin {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 0;
+}
     #p-pad  { padding-left: 16px; font-size: 16px; }
 
-    .derecha  { padding-left: 40px; }
-    #margin   { margin-left: 0; margin-top: 20px; }
+ .derecha {
+    padding-left: 90px;
+}
 
-    /* FORMULARIO */
-    .form-difuminado {
-        height: auto;
-        min-height: 874px;
-        background: url('imagenes/ascii-formulario.png'), linear-gradient(180deg, #141414 60%, #caf7002a 100%);
-        background-size: 80%, 100% 100%;
-        background-repeat: no-repeat;
-        background-position: right bottom, center;
-    }
+#margin {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 187px;
+    display: block;
+    text-align: center;
+}
+   .form-difuminado {
+    height: auto;
+    min-height: 874px;
+    background: #141414;
+    padding-bottom: 60px;
+}
 
-    .columna-formula {
-        width: 100%;
-        padding-left: 24px;
-        padding-right: 16px;
-        padding-top: 24px;
-    }
+.columna-formula {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 24px;
+}
 
-    .columna-formula > h3 {
-        font-size: 16px;
-        line-height: 1.8;
-        padding-bottom: 20px;
-    }
+.form-difuminado h2 {
+    text-align: left;
+}
 
-    .derechaTRES { padding-left: 100px; }
+.columna-formula > h3 {
+    font-size: 20px;
+    line-height: 1.8;
+    padding-bottom: 50px;
+    padding-left: 25px;
+    text-align: left;
+}
 
-    .campo-formulario {
-        width: 100%;
-        margin-bottom: 24px;
-    }
+.derechaTRES {
+    padding-left: 89px;
+    display: block;
+}
+.campo-formulario {
+    width: 100%;
+    margin-bottom: 80px;
+}
 
-    .campo-formulario input {
-        font-size: 18px;
-        padding: 4px 30px 8px 0;
-    }
+.campo-formulario input {
+    font-size: 20px;
+    padding: 4px 30px 8px 0;
+}
 
-    .campo-formulario input::placeholder {
-        font-size: 18px;
-    }
+.campo-formulario input::placeholder {
+    font-size: 18px;
+}
 
-    .asterisco { font-size: 18px; }
+.asterisco { font-size: 18px; }
 
-    .btn-colum {
-        width: 100%;
-        margin-top: 16px;
-    }
+.btn-colum {
+    width: 187px;
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+}
+
 
     /* MARQUEE */
     .marquee-content {

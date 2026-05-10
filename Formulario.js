@@ -140,3 +140,24 @@ document.querySelector('.carrusel-flecha.derecha').addEventListener('click', () 
 });
 
 renderCarrusel();
+
+const track = document.querySelector('.carrusel-track');
+let startX = 0;
+
+track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+track.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+            indiceActual = (indiceActual + 1) % equipos.length;
+        } else {
+            indiceActual = (indiceActual - 1 + equipos.length) % equipos.length;
+        }
+        renderCarrusel();
+    }
+});
