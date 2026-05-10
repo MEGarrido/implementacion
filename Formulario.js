@@ -82,3 +82,61 @@ document.getElementById('registro-form').addEventListener('submit', function(e) 
     document.getElementById('modal-gracias').textContent = '¡GRACIAS ' + nombre.toUpperCase() + '!';
 abrirModal('modal-exito');
 });
+
+const equipos = [
+    { img: 'imagenes/9z-team.png', nombre: '9Z TEAM', desc: 'Equipo <span class= "resaltado-verde">argentino</span>. Con garra,  estilo de juego agresivo y la capacidad de sorprender a los grandes.', pais: '' },
+    { img: 'imagenes/exolos-team.png', nombre: 'EXOLOS TEAM', desc: 'Equipo <span class="resaltado-verde">mexicano</span>. Tipo de juego competitivo apasionado por el juego táctico y el trabajo en equipo.' },
+    { img: 'imagenes/kru-team.png', nombre: 'KRÜ TEAM', desc: 'Equipo <span class="resaltado-verde">argentino</span>. Proveniente de la organización fundada por Agüero y Messi. Referente internacional de la región.'},
+    { img: 'imagenes/leviatan-team.png', nombre: 'LEVIATAN TEAM', desc: 'Equipo <span class="resaltado-verde">argentino</span>. El dragón que domina el VCT Américas. Buscamos el liderazgo regional en cada competencia global.', pais: '' },
+    { img: 'imagenes/reta-team.png', nombre: 'RETA TEAM', desc: 'Equipo <span class="resaltado-verde">mexicano</span>. Busca ser el referente del norte de la región, destacando por su agresividad y talento joven.', pais: '' },
+    { img: 'imagenes/allknights-team.png', nombre: 'ALLKNIGHTS', desc: 'Equipo <span class="resaltado-verde">argentino</span>. Un competidor sólido y táctico que siempre busca un lugar en las ligas principales.', pais: '' },
+];
+
+let indiceActual = 1;
+
+function renderCarrusel() {
+    const track = document.querySelector('.carrusel-track');
+    const dots = document.querySelectorAll('.dot');
+    const total = equipos.length;
+
+    const prev = (indiceActual - 1 + total) % total;
+    const next = (indiceActual + 1) % total;
+
+   track.innerHTML = `
+    <div class="tarjeta-equipo lateral" onclick="irA(${prev})">
+        <img src="${equipos[prev].img}" alt="${equipos[prev].nombre}">
+        <div class="tarjeta-nombre">${equipos[prev].nombre}</div>
+    </div>
+    <div class="tarjeta-equipo central">
+        <img src="${equipos[indiceActual].img}" alt="${equipos[indiceActual].nombre}">
+        <div class="tarjeta-nombre activo">${equipos[indiceActual].nombre}</div>
+        <div class="tarjeta-desc"><p>${equipos[indiceActual].desc}</p></div>
+    </div>
+    <div class="tarjeta-equipo lateral" onclick="irA(${next})">
+        <img src="${equipos[next].img}" alt="${equipos[next].nombre}">
+        <div class="tarjeta-nombre">${equipos[next].nombre}</div>
+    </div>
+`;
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('activo', i === indiceActual);
+        dot.onclick = () => irA(i);
+    });
+}
+
+function irA(i) {
+    indiceActual = i;
+    renderCarrusel();
+}
+
+document.querySelector('.carrusel-flecha.izquierda').addEventListener('click', () => {
+    indiceActual = (indiceActual - 1 + equipos.length) % equipos.length;
+    renderCarrusel();
+});
+
+document.querySelector('.carrusel-flecha.derecha').addEventListener('click', () => {
+    indiceActual = (indiceActual + 1) % equipos.length;
+    renderCarrusel();
+});
+
+renderCarrusel();
