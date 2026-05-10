@@ -410,3 +410,343 @@ a {
   color: inherit;
 }
 
+.form-difuminado {
+    width: 100%;
+    height: 1080px;
+    background: url('imagenes/ascii-formulario.png'), linear-gradient(110deg, #141414 48%, #caf7002a 80%);
+    background-size: 50%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom, center;
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-formula {
+    width: 900px;          /* antes 520px — necesita más espacio para el h3 de 30px */
+    text-align: left;
+    padding-left: 120px;
+    padding-top: 42px;
+}
+
+.columna-formula > h3 {
+    font-size: 30px;       /* el valor correcto */
+    padding-bottom: 35px;
+    line-height: 1.9;
+}
+
+
+
+.derechaTRES {
+    display: block;
+    padding-left: 369px;   /* subilo hasta que quede alineado como en la imagen */
+}
+
+.campo-formulario {
+    width: 600px;
+    border-bottom: 2px solid #D4FF00;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    display: block;
+    position: relative;
+}
+.campo-formulario label {
+    display: block;
+    font-family: "Orbitron Bold", sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #c5c5c583;      /* gris como en la imagen objetivo */
+}
+
+.campo-formulario input {
+    width: 100%;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: "Orbitron Bold", sans-serif;
+    font-size: 30px;
+    padding: 4px 40px 10px 0;  /* padding-right: 40px para que el * no tape el texto */
+    caret-color: #D4FF00;
+    box-shadow: none;
+    display: block;
+    box-sizing: border-box;
+}
+/* Neutraliza el fondo blanco del autocomplete */
+.campo-formulario input:-webkit-autofill,
+.campo-formulario input:-webkit-autofill:hover,
+.campo-formulario input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #141414 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.btn-colum {
+    width: 500px;          /* mismo ancho que los campos */
+    text-align: center;
+    margin-top: 20px;
+}
+
+#form-h3 {
+    padding-bottom: 0px;
+}
+
+.form-pad {
+    display: block;
+}
+
+.campo-formulario input::placeholder {
+    font-family: "Orbitron Bold", sans-serif;
+    font-size: 30px;
+    color: #c5c5c583;
+    letter-spacing: 1px;
+}
+
+
+
+.asterisco {
+    font-family: "Orbitron Bold", sans-serif;
+    font-size: 30px;
+    color: #E80037;
+    opacity: 0.5;
+    position: absolute;
+    top: 4px;
+    left: 0;               /* empieza en 0, el JS lo mueve */
+    pointer-events: none;
+    transition: none;
+}
+.campo-formulario input:-webkit-autofill,
+.campo-formulario input:-webkit-autofill:hover,
+.campo-formulario input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #141414 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#modal-exito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#modal-imagen {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+#modal-negativo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#modal-imagen-negativo {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+    cursor: default;
+    pointer-events: none;  /* ← esto */
+}
+
+#modal-exito-contenido {
+    position: relative;
+    display: inline-block;
+    pointer-events: none;
+    text-align: center;    /* centra el contenido interno */
+}
+#modal-gracias {
+    font-family: "Matroska", sans-serif;
+    font-size: 30px;
+    color: #C8F700;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    white-space: normal;
+    padding: 0 24% 0 5%;   /* más padding derecho para compensar el pico izquierdo */
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 430px) {
+
+    /* TIPOGRAFÍA GLOBAL */
+    h1 { font-size: 44px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; padding-bottom: 20px; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 16px; }
+    h6 { font-size: 14px; }
+    p  { font-size: 16px; }
+
+    /* PORTADA */
+    .banner-difuminado {
+        padding-top: 120px;
+        padding-left: 24px;
+        height: 874px;
+        min-height: 874px;
+        background: linear-gradient(180deg, #141414 55%, #FF003C 58%, rgb(255,255,255,0.2) 70%), url('imagenes/portada.png');
+        background-size: 100% 100%, 100% auto;
+        background-repeat: no-repeat;
+        background-position: center, center bottom;
+    }
+
+    #pad-cup { padding-left: 60px; }
+
+    .columna-portada {
+        width: 100%;
+        padding: 20px 24px 0 0;
+        text-align: left;
+    }
+
+    .h3-40 { font-size: 16px; }
+
+    /* SECCIONES IMÁGENES */
+    .seccion-acople {
+        height: auto;
+        min-height: 500px;
+        padding: 40px 16px;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    .contenedor-imagenes { width: 100%; }
+
+    .h3-35 { font-size: 20px; }
+
+    .p18 {
+        font-size: 16px;
+        padding: 20px 16px;
+    }
+
+    /* EQUIPOS */
+    .seccion-equipos {
+        height: 500px;
+        background-size: cover;
+    }
+
+    .columna-titulos {
+        width: 100%;
+        padding-left: 24px;
+        padding-top: 40px;
+    }
+
+    .derechaDOS { padding-left: 40px; }
+
+    /* DUDAS */
+    .dudas-difuminado {
+        height: auto;
+        min-height: 600px;
+        background: linear-gradient(to bottom, #141414 60%, rgb(255,0,60,0.3) 100%);
+    }
+
+    .columna-dudas {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 16px;
+    }
+
+    #h3-sin { font-size: 16px; }
+    #p-pad  { padding-left: 16px; font-size: 16px; }
+
+    .derecha  { padding-left: 40px; }
+    #margin   { margin-left: 0; margin-top: 20px; }
+
+    /* FORMULARIO */
+    .form-difuminado {
+        height: auto;
+        min-height: 874px;
+        background: url('imagenes/ascii-formulario.png'), linear-gradient(180deg, #141414 60%, #caf7002a 100%);
+        background-size: 80%, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: right bottom, center;
+    }
+
+    .columna-formula {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 16px;
+        padding-top: 24px;
+    }
+
+    .columna-formula > h3 {
+        font-size: 16px;
+        line-height: 1.8;
+        padding-bottom: 20px;
+    }
+
+    .derechaTRES { padding-left: 100px; }
+
+    .campo-formulario {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .campo-formulario input {
+        font-size: 18px;
+        padding: 4px 30px 8px 0;
+    }
+
+    .campo-formulario input::placeholder {
+        font-size: 18px;
+    }
+
+    .asterisco { font-size: 18px; }
+
+    .btn-colum {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    /* MARQUEE */
+    .marquee-content {
+        gap: 60px;
+        padding-right: 60px;
+    }
+
+    .marquee-content img { height: 40px; }
+
+    /* FOOTER */
+    .seccion-footer {
+        height: auto;
+        padding-left: 24px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-links { padding-left: 0; }
+
+    /* MODALES */
+    #modal-imagen,
+    #modal-imagen-negativo {
+        max-width: 95%;
+    }
+
+    #modal-gracias { font-size: 20px; }
+
+    /* BTN */
+    .btn {
+        margin-top: 30px;
+        padding: 12px 24px;
+    }
+}
