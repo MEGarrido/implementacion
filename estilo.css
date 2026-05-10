@@ -23,6 +23,7 @@
 
 html{
     background-color: #141414;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -43,6 +44,7 @@ h2{
     text-align: left;
     font-size: 44px;
     color: #FFFFFF;
+    line-height: 1;
 }
 
 h3{
@@ -87,6 +89,10 @@ p{
     color: #FF003C;
 }
 
+.resaltado-rojo2{
+    color: #ff003c79;
+}
+
 .gris{
     color: #c5c5c583;
 }
@@ -101,12 +107,17 @@ p{
 
 .derecha {
   align-self: flex-end;  /* Esto empuja solo este renglón a la derecha */
-  padding-left: 200px;    /* O puedes usar un padding para un control más fino */
+  padding-left: 192px;   
 }
 
 .derechaDOS {
   align-self: flex-end;  /* Esto empuja solo este renglón a la derecha */
-  padding-left: 100px;    /* O puedes usar un padding para un control más fino */
+  padding-left: 100px;   
+}
+
+.derechaTRES{
+      align-self: flex-end;  /* Esto empuja solo este renglón a la derecha */
+      padding-left: 365px;   
 }
 
 
@@ -153,7 +164,6 @@ p{
     align-self: flex-start;
 }
 
-
 /* Sección Imágenes que se acoplan*/
 
 .seccion-acople {
@@ -161,46 +171,44 @@ p{
     height: 1080px;
     
     background-size: cover;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     
     /*para ordenar los contenedores*/
     display: flex;
     justify-content: flex-end; 
     align-items: flex-end;     
-    padding: 106px 122px; 
+    padding: 150px 5px; 
 }
 
 .foto-1 {
-    background-image: url('imagenes/spike-arena.jpg');
+    background-image: url('imagenes/arena.jpg');
     background-size: 100%;
-    background-position: left bottom;
 }
 
 .foto-2 {
-    background-image: url('imagenes/pausa-stands.jpg');
+    background-image: url('imagenes/stands.jpg');
     background-size: 100%;
-    background-position: left bottom;
 }
 
 .foto-3 {
-    background-image: url('imagenes/nosotros-level.jpg');
+    background-image: url('imagenes/leyendas.jpg');
     background-size: 100%;
 }
 
 
 .p18 {
-    font-size: 18px;
-    padding-bottom: 41px;
-    padding-top: 41px;
-    padding-left: 32px;
-    padding-right: 32px;
+    font-size: 20px;
+    padding-bottom: 63px;
+    padding-top: 63px;
+    padding-left: 47px;
+    padding-right: 47px;
 }
 
 .h3-35{
     font-size: 35px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
     text-align: center;
 }
 
@@ -231,11 +239,12 @@ p{
 }
 
 .columna-dudas{
-    width: 650px;
-    text-align: center;
-    padding-left: 120px;
-    padding-top: 50px;
+    width: 750px;
+    text-align: left;
+    padding-left: 118px;
+    padding-top: 10px;
 }
+
 
 .contenedor-titulo {
   display: flex;
@@ -248,6 +257,55 @@ p{
   display: flex;
   align-items:  top center; /* Alinea el ícono verticalmente con el texto */
   gap: 30px;
+}
+
+.acordeon {
+  background: transparent; /* QUITAMOS EL #fff QUE TENÍAS */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.acordeon label {
+  display: flex;       /* Cambiamos block por flex para alinear título y flecha */
+  align-items: center;
+  padding: 15px 0;     /* Quitamos el padding lateral si no quieres caja */
+  background: transparent; /* QUITAMOS EL #1c1c1c SI QUIERES EL LOOK LIMPIO */
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.acordeon .contenido-acordeon{
+    margin-left: 100px;
+    margin: 0px 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 300ms ease;
+    display: block;
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon{
+    max-height: 100px;
+    padding: 15px 0px;
+}
+.btn-acordeon{
+    display: none;
+}
+
+#h3-sin{
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+#p-pad{
+    padding-left: 40px;
+}
+
+#margin{
+    margin-left: 325px;
+}
+
+#h2-dudas{
+    padding-bottom: 20px;
 }
 
 
@@ -268,6 +326,30 @@ p{
     padding-left: 120px;
     padding-top: 42px;
 }
+
+.btn-colum{
+    width: 740px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+.form-pad{
+    padding-top: 111px;
+}
+
+#form-h3{
+    padding-bottom: 0px;
+}
+
+
+.campo-formulario {
+  border-bottom: 2px solid #D4FF00; /* Grosor y color neón */
+  padding-bottom: 5px;             /* Espacio entre el texto y la línea */
+  display: block;                  /* Para que ocupe todo el ancho */
+  width: 100%;
+}
+
 
 
 /*Sección Sponsors*/
