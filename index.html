@@ -115,28 +115,33 @@
             </div>
         </div>
     </section>
-    <section id="formulario">
-        <div class="form-difuminado">
-            <div class="columna-titulos">
-                 <h2>ASEGURÁ TU LUGAR EN EL ESTADIO</h2>
-            </div>
-            <div class="columna-formula">
-                 <h3>HAY SOLO <span class="resaltado-rojo">700 LUGARES</span>,<br> <span class="derechaTRES">NO PIERDAS EL <span class="resaltado-rojo">TUYO</span>.</span></h3>
-                 <div class="campo-formulario">
-                     <h3 id="form-h3"><span class="gris">NOMBRE<span class="resaltado-rojo2">*</span></span></h3>    
-                 </div>
-                 <div class="campo-formulario">
-                     <h3 id="form-h3" class="form-pad"><span class="gris">EMAIL<span class="resaltado-rojo2">*</span></span></h3>
-                 </div>
-                 <div class="campo-formulario">
-                     <h3 id="form-h3" class="form-pad"><span class="gris">DOCUMENTO DE IDENTIDAD<span class="resaltado-rojo2">*</span></span></h3>
-                 </div>
-                 <div class="btn-colum">
-                     <h4 class="btn">INSCRIBIRME</h4>
-                 </div>
-            </div>
+<form id="registro-form">
+<section id="formulario">
+    <div class="form-difuminado">
+        <div class="columna-titulos">
+             <h2>ASEGURÁ TU LUGAR EN EL ESTADIO</h2>
         </div>
-    </section>
+        <div class="columna-formula">
+             <h3>HAY SOLO <span class="resaltado-rojo">700 LUGARES</span>,<br> <span class="derechaTRES">NO PIERDAS EL <span class="resaltado-rojo">TUYO</span>.</span></h3>
+<div class="campo-formulario">
+    <input type="text" id="nombre" name="nombre" placeholder="NOMBRE *" required>
+</div>
+<div class="campo-formulario">
+    <input type="email" id="email" name="email" placeholder="EMAIL *" required>
+</div>
+<div class="campo-formulario">
+    <input type="text" id="documento" name="documento" placeholder="DOCUMENTO DE IDENTIDAD *" required>
+</div>
+             <div class="btn-colum">
+        <label for="submit-trigger">
+                <h4 class="btn">INSCRIBIRME</h4>
+         </label>
+                <input type="submit" id="submit-trigger" style="display:none;">
+        </div>
+        </div>
+    </div>
+</section>
+</form>
     <section>
         <div class="marquee">
              <div class="marquee-content">
@@ -190,5 +195,15 @@
             </div>
         </div>
     </footer>
+ <div id="modal-exito">
+    <div id="modal-exito-contenido">
+        <p id="modal-gracias"></p>
+        <img src="imagenes/Feedback.png" alt="Inscripción exitosa" id="modal-imagen">
+    </div>
+</div>
+    <script src="Formulario.js"></script>
+    <div id="modal-negativo">
+    <img src="imagenes/Feedback negativo.png" alt="Error" id="modal-imagen-negativo">
+</div>
 </body>
 </html>
