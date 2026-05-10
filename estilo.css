@@ -587,3 +587,166 @@ a {
     padding: 0 24% 0 5%;   /* más padding derecho para compensar el pico izquierdo */
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 430px) {
+
+    /* TIPOGRAFÍA GLOBAL */
+    h1 { font-size: 44px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; padding-bottom: 20px; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 16px; }
+    h6 { font-size: 14px; }
+    p  { font-size: 16px; }
+
+    /* PORTADA */
+    .banner-difuminado {
+        padding-top: 120px;
+        padding-left: 24px;
+        height: 874px;
+        min-height: 874px;
+        background: linear-gradient(180deg, #141414 55%, #FF003C 58%, rgb(255,255,255,0.2) 70%), url('imagenes/portada.png');
+        background-size: 100% 100%, 100% auto;
+        background-repeat: no-repeat;
+        background-position: center, center bottom;
+    }
+
+    #pad-cup { padding-left: 60px; }
+
+    .columna-portada {
+        width: 100%;
+        padding: 20px 24px 0 0;
+        text-align: left;
+    }
+
+    .h3-40 { font-size: 16px; }
+
+    /* SECCIONES IMÁGENES */
+    .seccion-acople {
+        height: auto;
+        min-height: 500px;
+        padding: 40px 16px;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    .contenedor-imagenes { width: 100%; }
+
+    .h3-35 { font-size: 20px; }
+
+    .p18 {
+        font-size: 16px;
+        padding: 20px 16px;
+    }
+
+    /* EQUIPOS */
+    .seccion-equipos {
+        height: 500px;
+        background-size: cover;
+    }
+
+    .columna-titulos {
+        width: 100%;
+        padding-left: 24px;
+        padding-top: 40px;
+    }
+
+    .derechaDOS { padding-left: 40px; }
+
+    /* DUDAS */
+    .dudas-difuminado {
+        height: auto;
+        min-height: 600px;
+        background: linear-gradient(to bottom, #141414 60%, rgb(255,0,60,0.3) 100%);
+    }
+
+    .columna-dudas {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 16px;
+    }
+
+    #h3-sin { font-size: 16px; }
+    #p-pad  { padding-left: 16px; font-size: 16px; }
+
+    .derecha  { padding-left: 40px; }
+    #margin   { margin-left: 0; margin-top: 20px; }
+
+    /* FORMULARIO */
+    .form-difuminado {
+        height: auto;
+        min-height: 874px;
+        background: url('imagenes/ascii-formulario.png'), linear-gradient(180deg, #141414 60%, #caf7002a 100%);
+        background-size: 80%, 100% 100%;
+        background-repeat: no-repeat;
+        background-position: right bottom, center;
+    }
+
+    .columna-formula {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 16px;
+        padding-top: 24px;
+    }
+
+    .columna-formula > h3 {
+        font-size: 16px;
+        line-height: 1.8;
+        padding-bottom: 20px;
+    }
+
+    .derechaTRES { padding-left: 100px; }
+
+    .campo-formulario {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .campo-formulario input {
+        font-size: 18px;
+        padding: 4px 30px 8px 0;
+    }
+
+    .campo-formulario input::placeholder {
+        font-size: 18px;
+    }
+
+    .asterisco { font-size: 18px; }
+
+    .btn-colum {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    /* MARQUEE */
+    .marquee-content {
+        gap: 60px;
+        padding-right: 60px;
+    }
+
+    .marquee-content img { height: 40px; }
+
+    /* FOOTER */
+    .seccion-footer {
+        height: auto;
+        padding-left: 24px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-links { padding-left: 0; }
+
+    /* MODALES */
+    #modal-imagen,
+    #modal-imagen-negativo {
+        max-width: 95%;
+    }
+
+    #modal-gracias { font-size: 20px; }
+
+    /* BTN */
+    .btn {
+        margin-top: 30px;
+        padding: 12px 24px;
+    }
+}
