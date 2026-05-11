@@ -49,6 +49,21 @@ function abrirModal(id) {
     const modal = document.getElementById(id);
     modal.style.display = 'flex';
 
+    // Cambiar imagen según tamaño de pantalla
+    if (id === 'modal-exito') {
+        const img = document.getElementById('modal-imagen');
+        img.src = window.innerWidth <= 480 
+            ? 'imagenes/feedback-mobile.png' 
+            : 'imagenes/Feedback.png';
+    }
+
+    if (id === 'modal-negativo') {
+        const img = document.getElementById('modal-imagen-negativo');
+        img.src = window.innerWidth <= 480 
+            ? 'imagenes/Feedback mobile-negativo.png' 
+            : 'imagenes/Feedback negativo.png';
+    }
+
     modal.onclick = function(e) {
         if (e.target === modal) {
             cerrarModal(id);

@@ -169,33 +169,34 @@ p{
 .seccion-acople {
     width: 100%;
     height: 1080px;
-    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /*para ordenar los contenedores*/
     display: flex;
     justify-content: flex-end; 
     align-items: flex-end;     
-    padding: 150px 5px; 
+    padding: 150px 5px;
+    position: sticky;
+    top: 0;
 }
 
 .foto-1 {
     background-image: url('imagenes/arena.jpg');
     background-size: 100%;
+    z-index: 1;
 }
 
 .foto-2 {
     background-image: url('imagenes/stands.jpg');
     background-size: 100%;
+    z-index: 2;
 }
 
 .foto-3 {
     background-image: url('imagenes/leyendas.jpg');
     background-size: 100%;
+    z-index: 3;
 }
-
 
 .p18 {
     font-size: 20px;
@@ -574,7 +575,7 @@ a {
 }
 #modal-gracias {
     font-family: "Matroska", sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     color: #C8F700;
     position: absolute;
     top: 7%;
@@ -970,10 +971,11 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 100px;
-    background: linear-gradient(180deg, transparent 0%, transparent 25%, #FF003C 40%, #141414 55%), url('imagenes/portada.png');
+    background: linear-gradient(180deg, transparent 0%, transparent 25%, #ff003c7c 40%, #141414 53%), url('imagenes/portada.png');
     background-size: 135% auto;
     background-position: 100% 0%;
 }
+
 
     #pad-cup { padding-left: 195px; 
                 text-align: center;}
@@ -985,22 +987,36 @@ a {
     text-align: center;
 }
 
-    .h3-40 { font-size: 20px; 
-            padding-left: 24px;}
-        
-
+.h3-40 {
+    font-size: 20px;
+    padding-left: 97px;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-top: 80px;
+}   
+#fecha-portada {
+    padding-left: 97px;
+    margin-bottom: -30px;
+}
 
     /* SECCIONES IMÁGENES */
- .seccion-acople {
-    height: auto;
+.seccion-acople {
+    position: sticky;
+    top: 0;
+    height: 932px;
     min-height: 932px;
-    padding: 0;
+    padding: 80px 16px;
     justify-content: flex-end;
     align-items: flex-end;
-    flex-direction: column;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
+    z-index: 1;
 }
+
+.foto-1 { z-index: 1; }
+.foto-2 { z-index: 2; }
+.foto-3 { z-index: 3; }
+
 .contenedor-imagenes {
     width: 100%;
     background: #141414;
@@ -1091,6 +1107,9 @@ a {
     background: #141414;
     padding-bottom: 0;
 }
+.dudas-difuminado .derecha {
+    padding-left: 90px;
+}
 
     .columna-dudas {
         width: 100%;
@@ -1107,7 +1126,7 @@ a {
 
     #h2-dudas {
     text-align: center;
-    padding-left: 25px;
+    padding-left: 0px;
 }
    #h3-sin {
     font-size: 20px;
@@ -1118,6 +1137,11 @@ a {
 
  .derecha {
     padding-left: 90px;
+}
+#modal-gracias {
+    font-size: 20px;
+    padding: 0 12% 0 5%;
+    text-align: center;
 }
 
 #margin {
@@ -1183,23 +1207,61 @@ a {
 
 
     /* MARQUEE */
-    .marquee-content {
-        gap: 60px;
-        padding-right: 60px;
-    }
+   .marquee {
+    padding: 10px 0;
+}
 
-    .marquee-content img { height: 40px; }
+.marquee-content {
+    height: 40px;
+    gap: 60px;
+    padding-right: 60px;
+    padding-top: 5px;
+}
 
+.marquee-content img {
+    height: 30px;
+}
+
+.marquee-content {
+    animation: scroll 8s linear infinite;
+}
     /* FOOTER */
-    .seccion-footer {
-        height: auto;
-        padding-left: 24px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
+.seccion-footer {
+    height: auto;
+    padding: 0;
+    background-image: none;
+    background-color: #141414;
+    border: 1px solid #C8F700;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-    .footer-links { padding-left: 0; }
+h5 {
+    font-size: 16px;
+    padding: 20px 16px 20px 24px;
+    border-bottom: 1px solid #C8F700;
+    border-right: 1px solid #C8F700;
+    grid-column: 1;
+}
 
+.footer-links a {
+    text-decoration: underline;
+    color: #C8F700;
+    text-underline-offset: 4px;
+}
+
+.footer-links {
+    padding: 16px;
+    padding-left: 60px;
+    grid-column: 1 / -1;
+    border-top: 1px solid #C8F700;
+    border-left: 1px solid #C8F700;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
     /* MODALES */
     #modal-imagen,
     #modal-imagen-negativo {
